@@ -1,0 +1,61 @@
+* {
+  box-sizing: border-box;
+  outline: 1px dotted red;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.main-header {
+  min-height: 80px;
+}
+
+.sub-header {
+  background: #ccf;
+}
+
+.sub-content {
+  * > {
+    outline: none;
+  }
+
+  overflow-y: auto;
+}
+
+.sub-footer {
+  background: #cfc;
+}
+
+.container {
+  height: calc(100% - 80px);
+
+  display: grid;
+  grid-template-rows: 50px 1fr 50px;
+  grid-gap: 0;
+
+  position: relative;
+}
+
+.drawer {
+  height: 100%;
+  position: absolute;
+  opacity: 0.8;
+  width: 300px;
+  top: 0;
+  bottom: 0;
+  right: 20px;
+
+  outline: 2px solid red;
+
+  .container {
+    height: 100%;
+  }
+}
